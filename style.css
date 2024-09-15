@@ -27,10 +27,51 @@ body{
     height: auto;
     transition: all 1.5s ease;
 }
+#mem1:checked~.slider .start {
+    margin-left: 0;
 
+}
+
+#mem2:checked~.slider .start {
+    margin-left: -100%;
+
+
+}
+#mem3:checked~.slider .start {
+    margin-left: -200%;
+
+}
+
+
+#mem4:checked~.slider .start {
+    margin-left: -300%;
+}
+
+#mem1:checked~.nav .title .start {
+    margin-left: 0;
+
+}
+
+#mem2:checked~.nav .title .start {
+    margin-left: -100%;
+}
+
+#mem3:checked~.nav .title .start {
+    margin-left: -200%;
+}
+
+#mem4:checked~.nav .title .start {
+    margin-left: -300%;
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+}
 .buttons{
     display: flex;
     cursor: pointer;
+    width: 7rem;
+    padding: 0.35rem;
 }
 
 .btn {
@@ -59,8 +100,3 @@ body{
     background-color: black;
     border: 0.30em solid #8b00ff;
 }
-
-
-/*.btn-nav:active{
-    background-color: black;
-}*/
