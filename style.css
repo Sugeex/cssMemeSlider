@@ -7,17 +7,60 @@ body{
     background-color: #242424;
 }
 .main{
+    max-width: 50em;
     margin: auto;
     display: flex;
-    justify-content: center;
-    padding-top: 10em;
+    flex-direction: column;
+    padding: 10em 1em 0em 1em;
+    width: 100%;
 }
+.main>input{
+    display: none;
+}
+
 .slider {
-    max-width: 50em;
     overflow: hidden;
     display: flex;
 }
-.sliders>img{
-    width: 87vh;
-    height: 45vh;
+.sliders {
+    width: 100%;
+    height: auto;
+    transition: all 1.5s ease;
 }
+
+.buttons{
+    display: flex;
+    cursor: pointer;
+}
+
+.btn {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.btn:hover .button {
+    background-color: #8b00ff;
+    transition: all .4s ease;
+}
+.button {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    background-color: white;
+}
+
+#mem1:checked ~ .nav .buttons label:nth-of-type(1) .button,
+#mem2:checked ~ .nav .buttons label:nth-of-type(2) .button,
+#mem3:checked ~ .nav .buttons label:nth-of-type(3) .button,
+#mem4:checked ~ .nav .buttons label:nth-of-type(4) .button{
+    background-color: black;
+    border: 0.30em solid #8b00ff;
+}
+
+
+/*.btn-nav:active{
+    background-color: black;
+}*/
