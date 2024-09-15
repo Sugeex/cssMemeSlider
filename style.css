@@ -122,3 +122,10 @@ body{
     background-color: black;
     border: 0.30em solid #8b00ff;
 }
+@media screen and (width<501px) {
+    .nav{
+       flex-wrap: wrap-reverse;
+       justify-content: center; 
+    }
+    
+}
