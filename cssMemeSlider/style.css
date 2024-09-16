@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #242424;
+}
+.main{
+    max-width: 50em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 8em 1em 0em 1em;
+    width: 100%;
+    gap: 1.1em;
+}
+.main>input{
+    display: none;
+}
+
+.slider {
+    overflow: hidden;
+    display: flex;
+}
+.sliders {
+    width: 100%;
+    height: auto;
+    transition: all 1.5s ease;
+}
+#mem1:checked~.slider .start {
+    margin-left: 0;
+
+}
+
+#mem2:checked~.slider .start {
+    margin-left: -100%;
+
+
+}
+#mem3:checked~.slider .start {
+    margin-left: -200%;
+
+}
+
+
+#mem4:checked~.slider .start {
+    margin-left: -300%;
+}
+
+#mem1:checked~.nav .title .start {
+    margin-left: 0;
+
+}
+
+#mem2:checked~.nav .title .start {
+    margin-left: -100%;
+}
+
+#mem3:checked~.nav .title .start {
+    margin-left: -200%;
+}
+
+#mem4:checked~.nav .title .start {
+    margin-left: -300%;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+
+.text {
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.5em;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    transition: all 1.5s ease;
+    color: white;
+}
+.buttons{
+    display: flex;
+    cursor: pointer;
+    width: 7rem;
+    padding: 0.35rem;
+}
+
+.btn {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.btn:hover .button {
+    background-color: #8b00ff;
+    transition: all .4s ease;
+}
+.button {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    background-color: white;
+}
+
+#mem1:checked ~ .nav .buttons label:nth-of-type(1) .button,
+#mem2:checked ~ .nav .buttons label:nth-of-type(2) .button,
+#mem3:checked ~ .nav .buttons label:nth-of-type(3) .button,
+#mem4:checked ~ .nav .buttons label:nth-of-type(4) .button{
+    background-color: black;
+    border: 0.30em solid #8b00ff;
+}
+#mem1:checked ~ .nav .buttons label:nth-of-type(1) .button:hover,
+#mem2:checked ~ .nav .buttons label:nth-of-type(2) .button:hover,
+#mem3:checked ~ .nav .buttons label:nth-of-type(3) .button:hover,
+#mem4:checked ~ .nav .buttons label:nth-of-type(4) .button:hover{
+    border: 0.30em solid #ffffff;
+}
+@media screen and (width<501px) {
+    .nav{
+       flex-wrap: wrap-reverse;
+       justify-content: center; 
+    }
+    
+}
