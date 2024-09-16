@@ -122,6 +122,12 @@ body{
     background-color: black;
     border: 0.30em solid #8b00ff;
 }
+#mem1:checked ~ .nav .buttons label:nth-of-type(1) .button:hover,
+#mem2:checked ~ .nav .buttons label:nth-of-type(2) .button:hover,
+#mem3:checked ~ .nav .buttons label:nth-of-type(3) .button:hover,
+#mem4:checked ~ .nav .buttons label:nth-of-type(4) .button:hover{
+    border: 0.30em solid #ffffff;
+}
 @media screen and (width<501px) {
     .nav{
        flex-wrap: wrap-reverse;
